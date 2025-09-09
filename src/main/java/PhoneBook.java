@@ -23,6 +23,7 @@ public class PhoneBook {
     }
 
     public String printAllNames () {
-        return null;
+        String list = phoneBook.keySet().toString();
+        return list.substring(1, list.length()-1);
     }
 }
