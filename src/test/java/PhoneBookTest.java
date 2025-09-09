@@ -62,5 +62,20 @@ public class PhoneBookTest {
         // Assert
         Assertions.assertEquals("+79001112233", name);
     }
+
+    @Test
+    public void testPrintAllNames(){
+        // Arrange
+        PhoneBook pb = new PhoneBook();
+
+        // Act
+        pb.add("Алексей", "+79001112233");
+        pb.add("Максим", "+79001112244");
+
+        String names = pb.printAllNames();
+
+        // Assert
+        Assertions.assertEquals("Алексей, Максим", names);
+    }
 }
 
