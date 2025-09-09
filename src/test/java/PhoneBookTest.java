@@ -71,11 +71,12 @@ public class PhoneBookTest {
         // Act
         pb.add("Алексей", "+79001112233");
         pb.add("Максим", "+79001112244");
+        pb.add("Анатолий", "+79001112255");
 
         String names = pb.printAllNames();
 
         // Assert
-        Assertions.assertEquals("Алексей, Максим", names);
+        Assertions.assertEquals("Алексей, Анатолий, Максим", names);
     }
 }
 
