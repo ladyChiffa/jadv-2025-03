@@ -47,5 +47,20 @@ public class PhoneBookTest {
 
         Assertions.assertEquals("Максим", number);
     }
+
+    @Test
+    public void testFindByName(){
+        // Arrange
+        PhoneBook pb = new PhoneBook();
+
+        // Act
+        pb.add("Алексей", "+79001112233");
+        pb.add("Максим", "+79001112244");
+
+        String name = pb.findByName("Алексей");
+
+        // Assert
+        Assertions.assertEquals("+79001112233", name);
+    }
 }
 
