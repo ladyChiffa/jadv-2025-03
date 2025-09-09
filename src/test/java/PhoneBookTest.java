@@ -33,4 +33,19 @@ public class PhoneBookTest {
         int count = pb.add("Алексей", "+79001112244");
         Assertions.assertEquals(1, count);
     }
+
+    @Test
+    public void testFindByNumber(){
+        // Arrange
+        PhoneBook pb = new PhoneBook();
+
+        // Act
+        pb.add("Алексей", "+79001112233");
+        pb.add("Максим", "+79001112244");
+
+        String number = pb.findByNumber("+79001112244");
+
+        Assertions.assertEquals("Максим", number);
+    }
 }
+
