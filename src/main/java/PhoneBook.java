@@ -10,6 +10,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(String phoneNum){
+        for(Map.Entry<String, String> entry : phoneBook.entrySet()) {
+            if (entry.getValue().equals(phoneNum)) {
+                return entry.getKey();
+            }
+        }
         return null;
     }
 }
